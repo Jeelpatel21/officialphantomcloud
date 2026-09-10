@@ -126,13 +126,23 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isMouseTicking) {
             requestAnimationFrame(() => {
                 if (logo3d) {
-                    gsap.to(logo3d, {
-                        rotationY: mouseXNorm * 10,
-                        rotationX: -mouseYNorm * 10,
-                        duration: 0.5,
-                        ease: 'power2.out',
-                        overwrite: 'auto'
-                    });
+                    if (logo3d.matches(':hover')) {
+                        gsap.to(logo3d, {
+                            rotationY: 0,
+                            rotationX: 0,
+                            duration: 0.3,
+                            ease: 'power2.out',
+                            overwrite: 'auto'
+                        });
+                    } else {
+                        gsap.to(logo3d, {
+                            rotationY: mouseXNorm * 6,
+                            rotationX: -mouseYNorm * 6,
+                            duration: 0.5,
+                            ease: 'power2.out',
+                            overwrite: 'auto'
+                        });
+                    }
                 }
                 
                 shapes.forEach((shape, index) => {
