@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($sheet_success) {
         echo "<div style='font-family:sans-serif;max-width:500px;margin:60px auto;text-align:center;padding:30px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,0.1);background:#f0fdf4;border:1px solid #bbf7d0;'>";
         echo "<h2 style='color:#16a34a;margin-bottom:10px;'>Message Sent Successfully ✅</h2>";
-        echo "<p style='color:#374151;'>Your information has been recorded in the database. We will get back to you soon.</p>";
+        echo "<p style='color:#374151;'>Your information has been recorded. We will get back to you soon.</p>";
         echo "<a href='contact.html' style='display:inline-block;margin-top:15px;padding:10px 20px;background:#16a34a;color:#fff;text-decoration:none;border-radius:8px;font-weight:600;'>Back to Website</a>";
         echo "</div>";
     } else {

@@ -879,6 +879,7 @@ body {
 
 .contact-form-container {
     padding: 48px 40px;
+    transform: none !important;
 }
 
 .contact-form {

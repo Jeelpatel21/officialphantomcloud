@@ -312,9 +312,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // GLASS CARD HOVER EFFECTS
     // ================================
     
-    const glassCards = document.querySelectorAll('.glass-card');
+    const glassCards = document.querySelectorAll('.glass-card:not(.contact-form-container)');
     
     glassCards.forEach(card => {
+        // Skip contact form container so users can fill the form comfortably without tilting
+        if (card.classList.contains('contact-form-container') || card.closest('.contact-form-container')) {
+            return;
+        }
+
         let cardRect = null;
         let isTilting = false;
         
